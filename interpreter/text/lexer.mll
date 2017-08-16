@@ -301,6 +301,14 @@ rule token = parse
     { CONVERT (intop t i32_trunc_s_f64 i64_trunc_s_f64) }
   | (ixx as t)".trunc_u/f64"
     { CONVERT (intop t i32_trunc_u_f64 i64_trunc_u_f64) }
+  | (ixx as t)".trunc_s:sat/f32"
+    { CONVERT (intop t i32_trunc_s_sat_f32 i64_trunc_s_sat_f32) }
+  | (ixx as t)".trunc_u:sat/f32"
+    { CONVERT (intop t i32_trunc_u_sat_f32 i64_trunc_u_sat_f32) }
+  | (ixx as t)".trunc_s:sat/f64"
+    { CONVERT (intop t i32_trunc_s_sat_f64 i64_trunc_s_sat_f64) }
+  | (ixx as t)".trunc_u:sat/f64"
+    { CONVERT (intop t i32_trunc_u_sat_f64 i64_trunc_u_sat_f64) }
   | (fxx as t)".convert_s/i32"
     { CONVERT (floatop t f32_convert_s_i32 f64_convert_s_i32) }
   | (fxx as t)".convert_u/i32"

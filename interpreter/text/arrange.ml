@@ -127,6 +127,10 @@ struct
     | TruncUF32 -> "trunc_u/f32"
     | TruncSF64 -> "trunc_s/f64"
     | TruncUF64 -> "trunc_u/f64"
+    | TruncSSatF32 -> "trunc_s:sat/f32"
+    | TruncUSatF32 -> "trunc_u:sat/f32"
+    | TruncSSatF64 -> "trunc_s:sat/f64"
+    | TruncUSatF64 -> "trunc_u:sat/f64"
     | ReinterpretFloat -> "reinterpret/f" ^ xx
 end
 
