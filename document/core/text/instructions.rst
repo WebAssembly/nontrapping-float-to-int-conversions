@@ -387,12 +387,20 @@ Numeric Instructions
      \text{i32.trunc\_u/f32} &\Rightarrow& \I32.\TRUNC\K{\_u/}\F32 \\ &&|&
      \text{i32.trunc\_s/f64} &\Rightarrow& \I32.\TRUNC\K{\_s/}\F64 \\ &&|&
      \text{i32.trunc\_u/f64} &\Rightarrow& \I32.\TRUNC\K{\_u/}\F64 \\ &&|&
+     \text{i32.trunc\_s{:}sat/f32} &\Rightarrow& \I32.\TRUNC\K{\_s{:}sat/}\F32 \\ &&|&
+     \text{i32.trunc\_u{:}sat/f32} &\Rightarrow& \I32.\TRUNC\K{\_u{:}sat/}\F32 \\ &&|&
+     \text{i32.trunc\_s{:}sat/f64} &\Rightarrow& \I32.\TRUNC\K{\_s{:}sat/}\F64 \\ &&|&
+     \text{i32.trunc\_u{:}sat/f64} &\Rightarrow& \I32.\TRUNC\K{\_u{:}sat/}\F64 \\ &&|&
      \text{i64.extend\_s/i32} &\Rightarrow& \I64.\EXTEND\K{\_s/}\I32 \\ &&|&
      \text{i64.extend\_u/i32} &\Rightarrow& \I64.\EXTEND\K{\_u/}\I32 \\ &&|&
      \text{i64.trunc\_s/f32} &\Rightarrow& \I64.\TRUNC\K{\_s/}\F32 \\ &&|&
      \text{i64.trunc\_u/f32} &\Rightarrow& \I64.\TRUNC\K{\_u/}\F32 \\ &&|&
      \text{i64.trunc\_s/f64} &\Rightarrow& \I64.\TRUNC\K{\_s/}\F64 \\ &&|&
      \text{i64.trunc\_u/f64} &\Rightarrow& \I64.\TRUNC\K{\_u/}\F64 \\ &&|&
+     \text{i64.trunc\_s{:}sat/f32} &\Rightarrow& \I64.\TRUNC\K{\_s{:}sat/}\F32 \\ &&|&
+     \text{i64.trunc\_u{:}sat/f32} &\Rightarrow& \I64.\TRUNC\K{\_u{:}sat/}\F32 \\ &&|&
+     \text{i64.trunc\_s{:}sat/f64} &\Rightarrow& \I64.\TRUNC\K{\_s{:}sat/}\F64 \\ &&|&
+     \text{i64.trunc\_u{:}sat/f64} &\Rightarrow& \I64.\TRUNC\K{\_u{:}sat/}\F64 \\ &&|&
      \text{f32.convert\_s/i32} &\Rightarrow& \F32.\CONVERT\K{\_s/}\I32 \\ &&|&
      \text{f32.convert\_u/i32} &\Rightarrow& \F32.\CONVERT\K{\_u/}\I32 \\ &&|&
      \text{f32.convert\_s/i64} &\Rightarrow& \F32.\CONVERT\K{\_s/}\I64 \\ &&|&
