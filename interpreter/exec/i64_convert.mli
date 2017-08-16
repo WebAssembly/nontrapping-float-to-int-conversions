@@ -6,4 +6,8 @@ val trunc_f32_s : F32.t -> I64.t
 val trunc_f32_u : F32.t -> I64.t
 val trunc_f64_s : F64.t -> I64.t
 val trunc_f64_u : F64.t -> I64.t
+val trunc_s_sat_f32 : F32.t -> I64.t
+val trunc_u_sat_f32 : F32.t -> I64.t
+val trunc_s_sat_f64 : F64.t -> I64.t
+val trunc_u_sat_f64 : F64.t -> I64.t
 val reinterpret_f64 : F64.t -> I64.t
