@@ -200,6 +200,19 @@ let memop s =
   let offset = vu32 s in
   Int32.to_int align, offset
 
+let math_prefix s =
+  let pos = pos s in
+  match op s with
+  | 0x00 -> i32_trunc_s_sat_f32
+  | 0x01 -> i32_trunc_u_sat_f32
+  | 0x02 -> i32_trunc_s_sat_f64
+  | 0x03 -> i32_trunc_u_sat_f64
+  | 0x04 -> i64_trunc_s_sat_f32
+  | 0x05 -> i64_trunc_u_sat_f32
+  | 0x06 -> i64_trunc_s_sat_f64
+  | 0x07 -> i64_trunc_u_sat_f64
+  | b -> illegal s pos b
+
 let rec instr s =
   let pos = pos s in
   match op s with
@@ -431,6 +444,8 @@ let rec instr s =
   | 0xbd -> i64_reinterpret_f64
   | 0xbe -> f32_reinterpret_i32
   | 0xbf -> f64_reinterpret_i64
+
+  | 0xfc -> math_prefix s
 
   | b -> illegal s pos b
 
