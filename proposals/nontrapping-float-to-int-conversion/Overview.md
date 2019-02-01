@@ -74,9 +74,9 @@ This proposal introduces a new prefix byte:
 
 | Prefix | Name    | Description |
 | ------ | ------- | ----------- |
-| `0xfc` | numeric | Numeric operations :bowling: |
+| `0xfc` | misc    | Miscellaneous operations :bowling: |
 
-which is intended to be used as a prefix for other future numeric operations
+which is intended to be used as a prefix for other future miscellaneous operations
 as well.
 
 The encodings for the new instructions use this new prefix and are as follows:
