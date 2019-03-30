@@ -53,14 +53,14 @@ https://github.com/WebAssembly/nontrapping-float-to-int-conversions
 
 This proposal introduces 8 new instructions:
 
- - `i32.trunc_s:sat/f32`
- - `i32.trunc_u:sat/f32`
- - `i32.trunc_s:sat/f64`
- - `i32.trunc_u:sat/f64`
- - `i64.trunc_s:sat/f32`
- - `i64.trunc_u:sat/f32`
- - `i64.trunc_s:sat/f64`
- - `i64.trunc_u:sat/f64`
+ - `i32.trunc_sat_f32_s`
+ - `i32.trunc_sat_f32_u`
+ - `i32.trunc_sat_f64_s`
+ - `i32.trunc_sat_f64_u`
+ - `i64.trunc_sat_f32_s`
+ - `i64.trunc_sat_f32_u`
+ - `i64.trunc_sat_f64_s`
+ - `i64.trunc_sat_f64_u`
 
 The semantics are the same as the corresponding non-`:sat` instructions, except:
  - Instead of trapping on positive or negative overflow, they return the maximum
@@ -83,11 +83,11 @@ The encodings for the new instructions use this new prefix and are as follows:
 
 | Name | Opcode | Immediate | Description |
 | ---- | ---- | ---- | ---- |
-| `i32.trunc_s:sat/f32` | `0xfc` `0x00` | | :bowling: saturating form of `i32.trunc_s/f32` |
-| `i32.trunc_u:sat/f32` | `0xfc` `0x01` | | :bowling: saturating form of `i32.trunc_u/f32` |
-| `i32.trunc_s:sat/f64` | `0xfc` `0x02` | | :bowling: saturating form of `i32.trunc_s/f64` |
-| `i32.trunc_u:sat/f64` | `0xfc` `0x03` | | :bowling: saturating form of `i32.trunc_u/f64` |
-| `i64.trunc_s:sat/f32` | `0xfc` `0x04` | | :bowling: saturating form of `i64.trunc_s/f32` |
-| `i64.trunc_u:sat/f32` | `0xfc` `0x05` | | :bowling: saturating form of `i64.trunc_u/f32` |
-| `i64.trunc_s:sat/f64` | `0xfc` `0x06` | | :bowling: saturating form of `i64.trunc_s/f64` |
-| `i64.trunc_u:sat/f64` | `0xfc` `0x07` | | :bowling: saturating form of `i64.trunc_u/f64` |
+| `i32.trunc_sat_f32_s` | `0xfc` `0x00` | | :bowling: saturating form of `i32.trunc_f32_s` |
+| `i32.trunc_sat_f32_u` | `0xfc` `0x01` | | :bowling: saturating form of `i32.trunc_f32_u` |
+| `i32.trunc_sat_f64_s` | `0xfc` `0x02` | | :bowling: saturating form of `i32.trunc_f64_s` |
+| `i32.trunc_sat_f64_u` | `0xfc` `0x03` | | :bowling: saturating form of `i32.trunc_f64_u` |
+| `i64.trunc_sat_f32_s` | `0xfc` `0x04` | | :bowling: saturating form of `i64.trunc_f32_s` |
+| `i64.trunc_sat_f32_u` | `0xfc` `0x05` | | :bowling: saturating form of `i64.trunc_f32_u` |
+| `i64.trunc_sat_f64_s` | `0xfc` `0x06` | | :bowling: saturating form of `i64.trunc_f64_s` |
+| `i64.trunc_sat_f64_u` | `0xfc` `0x07` | | :bowling: saturating form of `i64.trunc_f64_u` |
