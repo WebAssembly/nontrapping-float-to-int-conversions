@@ -42,7 +42,7 @@ let trunc_f64_u x =
     else
       Int64.(to_int32 (of_float xf))
 
-let trunc_s_sat_f32 x =
+let trunc_sat_f32_s x =
   if F32.ne x x then
     0l
   else
@@ -54,7 +54,7 @@ let trunc_s_sat_f32 x =
     else
       Int32.of_float xf
 
-let trunc_u_sat_f32 x =
+let trunc_sat_f32_u x =
   if F32.ne x x then
     0l
   else
@@ -66,7 +66,7 @@ let trunc_u_sat_f32 x =
     else
       Int64.(to_int32 (of_float xf))
 
-let trunc_s_sat_f64 x =
+let trunc_sat_f64_s x =
   if F64.ne x x then
     0l
   else
@@ -78,7 +78,7 @@ let trunc_s_sat_f64 x =
     else
       Int32.of_float xf
 
-let trunc_u_sat_f64 x =
+let trunc_sat_f64_u x =
   if F64.ne x x then
     0l
   else

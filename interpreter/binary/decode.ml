@@ -203,14 +203,14 @@ let memop s =
 let math_prefix s =
   let pos = pos s in
   match op s with
-  | 0x00 -> i32_trunc_s_sat_f32
-  | 0x01 -> i32_trunc_u_sat_f32
-  | 0x02 -> i32_trunc_s_sat_f64
-  | 0x03 -> i32_trunc_u_sat_f64
-  | 0x04 -> i64_trunc_s_sat_f32
-  | 0x05 -> i64_trunc_u_sat_f32
-  | 0x06 -> i64_trunc_s_sat_f64
-  | 0x07 -> i64_trunc_u_sat_f64
+  | 0x00 -> i32_trunc_sat_f32_s
+  | 0x01 -> i32_trunc_sat_f32_u
+  | 0x02 -> i32_trunc_sat_f64_s
+  | 0x03 -> i32_trunc_sat_f64_u
+  | 0x04 -> i64_trunc_sat_f32_s
+  | 0x05 -> i64_trunc_sat_f32_u
+  | 0x06 -> i64_trunc_sat_f64_s
+  | 0x07 -> i64_trunc_sat_f64_u
   | b -> illegal s pos b
 
 let rec instr s =

@@ -370,14 +370,14 @@ The saturating truncation instructions all have a one byte prefix.
 .. math::
    \begin{array}{llclll}
    \production{instruction} & \Binstr &::=& \dots && \phantom{thisshouldbeenough} \\&&|&
-     \hex{FC}~\hex{00} &\Rightarrow& \I32.\TRUNC\K{\_s{:}sat/}\F32 \\ &&|&
-     \hex{FC}~\hex{01} &\Rightarrow& \I32.\TRUNC\K{\_u{:}sat/}\F32 \\ &&|&
-     \hex{FC}~\hex{02} &\Rightarrow& \I32.\TRUNC\K{\_s{:}sat/}\F64 \\ &&|&
-     \hex{FC}~\hex{03} &\Rightarrow& \I32.\TRUNC\K{\_u{:}sat/}\F64 \\ &&|&
-     \hex{FC}~\hex{04} &\Rightarrow& \I64.\TRUNC\K{\_s{:}sat/}\F32 \\ &&|&
-     \hex{FC}~\hex{05} &\Rightarrow& \I64.\TRUNC\K{\_u{:}sat/}\F32 \\ &&|&
-     \hex{FC}~\hex{06} &\Rightarrow& \I64.\TRUNC\K{\_s{:}sat/}\F64 \\ &&|&
-     \hex{FC}~\hex{07} &\Rightarrow& \I64.\TRUNC\K{\_u{:}sat/}\F64 \\
+     \hex{FC}~\hex{00} &\Rightarrow& \I32.\TRUNC\K{\_sat\_}\F32\K{\_s} \\ &&|&
+     \hex{FC}~\hex{01} &\Rightarrow& \I32.\TRUNC\K{\_sat\_}\F32\K{\_u} \\ &&|&
+     \hex{FC}~\hex{02} &\Rightarrow& \I32.\TRUNC\K{\_sat\_}\F64\K{\_s} \\ &&|&
+     \hex{FC}~\hex{03} &\Rightarrow& \I32.\TRUNC\K{\_sat\_}\F64\K{\_u} \\ &&|&
+     \hex{FC}~\hex{04} &\Rightarrow& \I64.\TRUNC\K{\_sat\_}\F32\K{\_s} \\ &&|&
+     \hex{FC}~\hex{05} &\Rightarrow& \I64.\TRUNC\K{\_sat\_}\F32\K{\_u} \\ &&|&
+     \hex{FC}~\hex{06} &\Rightarrow& \I64.\TRUNC\K{\_sat\_}\F64\K{\_s} \\ &&|&
+     \hex{FC}~\hex{07} &\Rightarrow& \I64.\TRUNC\K{\_sat\_}\F64\K{\_u} \\
    \end{array}
 
 

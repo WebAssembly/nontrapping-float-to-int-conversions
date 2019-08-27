@@ -62,7 +62,7 @@ This proposal introduces 8 new instructions:
  - `i64.trunc_sat_f64_s`
  - `i64.trunc_sat_f64_u`
 
-The semantics are the same as the corresponding non-`:sat` instructions, except:
+The semantics are the same as the corresponding non-`_sat` instructions, except:
  - Instead of trapping on positive or negative overflow, they return the maximum
    or minimum integer value, respectively, and do not trap. (This behavior is
    also referred to as "saturating".)
